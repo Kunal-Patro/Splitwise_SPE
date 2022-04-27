@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
-public class User {
+public class User extends Base{
     @Column(name = "userID", unique = true, nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer userID;
@@ -12,7 +12,6 @@ public class User {
     @Column(name = "name", length = 50, nullable = false)
     private String name;
 
-    @Id
     @Column(name = "email", length = 100, unique = true, nullable = false)
     private String email;
 
