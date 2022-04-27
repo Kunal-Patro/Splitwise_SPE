@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "user")
 public class User extends Base{
-    @Column(name = "userID", unique = true, nullable = false, updatable = false)
+    @Column(name = "user_id", unique = true, nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer userID;
 

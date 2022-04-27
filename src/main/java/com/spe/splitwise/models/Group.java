@@ -14,6 +14,7 @@ public class Group extends Base {
     private User admin;
 
     @ManyToMany
+    @JoinTable(name = "user_group", joinColumns = @JoinColumn(name = "group_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
     private List<User> members;
 
     @JoinColumn
